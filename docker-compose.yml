@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+
+  config:
+    build: ./config-service
+    container_name: config
+    image: abdotalaat/config
+    restart: always
+    ports:
+    - 8081:8081

@@ -8,7 +8,7 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>config</module>
+        <module>config-service</module>
     </modules>
 
 
@@ -39,6 +39,7 @@
         </dependencies>
     </dependencyManagement>
     <build>
+        <finalName>${project.artifactId}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
