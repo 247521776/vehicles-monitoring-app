@@ -3,5 +3,15 @@ server:
 
 eureka:
   client:
+    fetchRegistry: true
     serviceUrl:
       defaultZone: http://discovery:8761/eureka
+
+
+
+zuul:
+  ignoredServices: '*'
+  routes:
+    customer:
+      serviceId: customer-service
+      path: /api-customer/**
