@@ -18,7 +18,15 @@ services:
     ports:
       - 8761:8761
 
-  api-gateway:
+  customer:
+    build: ./customer-service
+    image: abdotalaat/customer-service
+    container_name: customer
+    restart: always
+    ports:
+    - 9010:9010
+
+  gateway:
     build: ./gateway
     image: abdotalaat/gateway
     container_name: gateway
