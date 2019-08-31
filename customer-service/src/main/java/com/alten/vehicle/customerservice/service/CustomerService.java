@@ -1,6 +1,6 @@
 package com.alten.vehicle.customerservice.service;
 
-import com.alten.vehicle.customerservice.modle.Customer;
+import com.alten.vehicle.customerservice.model.Customer;
 import com.alten.vehicle.customerservice.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

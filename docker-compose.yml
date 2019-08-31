@@ -8,7 +8,7 @@ services:
     restart: always
     ports:
 
-      - 8081:8081
+    - 8081:8081
 
   discovery:
     build: ./discovery-service
@@ -16,7 +16,7 @@ services:
     container_name: discovery
     restart: always
     ports:
-      - 8761:8761
+    - 8761:8761
 
   customer:
     build: ./customer-service
@@ -25,6 +25,14 @@ services:
     restart: always
     ports:
     - 9010:9010
+
+  vehicle:
+    build: ./vehicle-service
+    image: abdotalaat/vehicle-service
+    container_name: vehicle
+    restart: always
+    ports:
+    - 9011:9011
 
   gateway:
     build: ./gateway

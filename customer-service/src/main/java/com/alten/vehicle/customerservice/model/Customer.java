@@ -1,8 +1,6 @@
-package com.alten.vehicle.customerservice.modle;
+package com.alten.vehicle.customerservice.model;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.Objects;
 
@@ -10,7 +8,6 @@ import java.util.Objects;
 public class Customer {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
     private String address;
@@ -19,7 +16,8 @@ public class Customer {
 
     }
 
-    public Customer(String name, String address) {
+    public Customer(long id, String name, String address) {
+        this.id = id;
         this.name = name;
         this.address = address;
     }

@@ -15,3 +15,6 @@ zuul:
     customer:
       serviceId: customer-service
       path: /api-customer/**
+    vehicle:
+      serviceId: vehicle-service
+      path: /api-vehicle/**
