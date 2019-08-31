@@ -1,2 +1,1 @@
-mvn clean install
-docker-compose up --build
+mvn clean install && docker-compose up --build

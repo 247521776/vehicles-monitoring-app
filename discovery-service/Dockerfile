@@ -1,6 +1,6 @@
 FROM java:8-jre
 WORKDIR /app
 ADD ./target/discovery-service.jar /app/
-CMD ["java", "-jar", "/app/iscovery-service.jar"]
+CMD ["java", "-jar", "/app/discovery-service.jar"]
 
-EXPOSE 8082
+EXPOSE 8761
