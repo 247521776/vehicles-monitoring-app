@@ -13,6 +13,15 @@ services:
   discovery:
     build: ./discovery-service
     image: abdotalaat/discovery
+    container_name: discovery
     restart: always
     ports:
       - 8761:8761
+
+  api-gateway:
+    build: ./gateway
+    image: abdotalaat/gateway
+    container_name: gateway
+    restart: always
+    ports:
+    - 8080:8080
