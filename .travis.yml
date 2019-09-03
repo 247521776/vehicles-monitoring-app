@@ -39,10 +39,10 @@ after_success:
 deploy:
   provider: elasticbeanstalk
   region: "us-east-2"
-  app: "vehicles-monitoring-app"
-  env: "VehiclesMonitoringApp-env"
+  app: "test-vehicle"
+  env: "TestVehicle-env"
   bucket_name: "elasticbeanstalk-us-east-2-990019026330"
-  bucket_path: "vehicles-monitoring-app"
+  bucket_path: "test-vehicle"
   on:
     branch: master
   access_key_id:
