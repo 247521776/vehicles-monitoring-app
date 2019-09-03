@@ -29,6 +29,8 @@ after_success:
     - docker push abdotalaat/config-service
     - docker build -t abdotalaat/multi-nginx    ./nginx
     - docker push abdotalaat/multi-nginx
+    - docker build -t abdotalaat/test-client    ./demo
+    - docker push abdotalaat/test-client
 
 
 

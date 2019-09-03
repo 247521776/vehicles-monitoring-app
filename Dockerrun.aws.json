@@ -23,7 +23,7 @@
   "containerDefinitions": [
     {
       "name":"client",
-      "image":"abdotalaat/multi-client",
+      "image":"abdotalaat/test-client",
       "hostname":"client",
       "essential": false,
       "memory":128
