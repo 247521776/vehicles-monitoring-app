@@ -1,0 +1,1 @@
+[![Build Status](https://travis-ci.org/abdotalaat/vehicles-monitoring-app.svg?branch=master)](https://travis-ci.org/abdotalaat/vehicles-monitoring-app)
