@@ -62,7 +62,7 @@
       ],
       "links":
       [
-        "discovery","client"
+        "customer","client"
       ],
       "memory":128
     }
