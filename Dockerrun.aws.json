@@ -46,7 +46,7 @@
       ],
       "links":
       [
-        "client","server"
+        "config"
       ],
       "memory":128
     }
