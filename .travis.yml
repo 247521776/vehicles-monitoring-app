@@ -18,3 +18,7 @@ addons:
 
 script:
     - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=abdotalaat_vehicles-monitoring-app
+
+
+after_success:
+    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
