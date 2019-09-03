@@ -8,8 +8,8 @@
       "essential": true,
       "portMappings":[
         {
-          "containerPort": 8081,
-          "protocol": "tcp"
+          "hostPort":8081,
+          "containerPort":8081
         }
       ],
       "memory":128
