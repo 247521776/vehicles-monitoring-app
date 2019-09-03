@@ -1,6 +1,9 @@
 language: java
 jdk:
-- openjdk9
+  - openjdk9
+
+services:
+  - docker
 
 cache:
   directories:
@@ -22,3 +25,5 @@ script:
 
 after_success:
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+    - docker build -t abdotalaat/config-service ./config-service
+    - docker push abdotalaat/config-service
