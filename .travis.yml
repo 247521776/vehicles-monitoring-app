@@ -25,10 +25,8 @@ script:
 
 after_success:
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-    - docker build -t abdotalaat/config-service ./config-service
-    - docker push abdotalaat/config-service
-    - docker build -t abdotalaat/discovery-service ./discovery-service
-    - docker push abdotalaat/discovery-service
+    - docker build -t abdotalaat/customer-service ./customer-service
+    - docker push abdotalaat/customer-service
     - docker build -t abdotalaat/multi-nginx    ./nginx
     - docker push abdotalaat/multi-nginx
     - cd demo
@@ -36,12 +34,6 @@ after_success:
     - docker build -t abdotalaat/test-client    .
     - docker push abdotalaat/test-client
     - cd ..
-    - cd vehicle-discovery-service
-    - mvn clean install
-    - docker build -t abdotalaat/test-discovery    .
-    - docker push abdotalaat/test-discovery
-    - cd ..
-
 
 
 deploy:

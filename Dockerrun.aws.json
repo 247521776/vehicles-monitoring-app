@@ -36,18 +36,19 @@
     },
 
     {
-      "name":"discovery",
-      "image":"abdotalaat/test-discovery",
-      "hostname":"discovery",
+      "name":"customer",
+      "image":"abdotalaat/customer-service",
+      "hostname":"customer",
       "essential": false,
       "memory":128,
       "portMappings":[
         {
-          "hostPort":8761,
-          "containerPort":8761
+          "hostPort":9010,
+          "containerPort":9010
         }
       ]
     },
+
     {
       "name":"ngnix",
       "image":"abdotalaat/multi-nginx",
