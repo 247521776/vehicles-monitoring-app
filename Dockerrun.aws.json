@@ -26,7 +26,13 @@
       "image":"abdotalaat/test-client",
       "hostname":"client",
       "essential": false,
-      "memory":128
+      "memory":128,
+      "portMappings":[
+        {
+          "hostPort":8080,
+          "containerPort":8080
+        }
+      ]
     },
     {
       "name":"config",
