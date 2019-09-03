@@ -34,6 +34,11 @@ after_success:
     - docker build -t abdotalaat/test-client    .
     - docker push abdotalaat/test-client
     - cd ..
+    - cd demotest
+    - mvn clean install
+    - docker build -t abdotalaat/test-client1    .
+    - docker push abdotalaat/test-client1
+    - cd ..
 
 
 deploy:

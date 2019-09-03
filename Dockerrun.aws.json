@@ -37,14 +37,14 @@
 
     {
       "name":"customer",
-      "image":"abdotalaat/customer-service",
-      "hostname":"customer",
+      "image":"abdotalaat/test-client1",
+      "hostname":"client",
       "essential": false,
       "memory":128,
       "portMappings":[
         {
-          "hostPort":9010,
-          "containerPort":9010
+          "hostPort":8081,
+          "containerPort":8081
         }
       ]
     },
