@@ -37,7 +37,7 @@
 
     {
       "name":"customer",
-      "image":"abdotalaat/test-client1",
+      "image":"abdotalaat/customer-service",
       "hostname":"customer",
       "essential": false,
       "memory":128,
