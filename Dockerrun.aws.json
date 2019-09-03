@@ -35,23 +35,6 @@
       ]
     },
 
-//    {
-//      "name":"discovery",
-//      "image":"abdotalaat/discovery-service",
-//      "hostname":"discovery",
-//      "essential": false,
-//      "memory":128,
-//      "portMappings":[
-//        {
-//          "hostPort":8761,
-//          "containerPort":8761
-//        }
-//      ],
-//      "mountPoints": [{
-//        "sourceVolume": "app",
-//        "containerPath": "/opt/app"
-//      }]
-//    },
     {
       "name":"ngnix",
       "image":"abdotalaat/multi-nginx",
