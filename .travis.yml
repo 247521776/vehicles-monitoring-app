@@ -36,6 +36,11 @@ after_success:
     - docker build -t abdotalaat/test-client    .
     - docker push abdotalaat/test-client
     - cd ..
+    - cd vehicle-discovery-service
+    - mvn clean install
+    - docker build -t abdotalaat/test-discovery    .
+    - docker push abdotalaat/test-discovery
+    - cd ..
 
 
 

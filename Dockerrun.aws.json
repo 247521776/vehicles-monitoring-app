@@ -37,7 +37,7 @@
 
     {
       "name":"discovery",
-      "image":"abdotalaat/discovery-service",
+      "image":"abdotalaat/test-discovery",
       "hostname":"discovery",
       "essential": false,
       "memory":128,
@@ -46,11 +46,7 @@
           "hostPort":8761,
           "containerPort":8761
         }
-      ],
-      "mountPoints": [{
-        "sourceVolume": "app",
-        "containerPath": "/opt/app"
-      }]
+      ]
     },
     {
       "name":"ngnix",
