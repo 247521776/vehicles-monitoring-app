@@ -56,7 +56,7 @@
         "containerPath": "/opt/app"
       }]
     },
-    ,{
+    {
       "name":"ngnix",
       "image":"abdotalaat/multi-nginx",
       "hostname":"nginx",
