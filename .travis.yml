@@ -31,7 +31,7 @@ after_success:
     - docker push abdotalaat/multi-nginx
     - cd demo
     - mvn clean install
-    - docker build -t abdotalaat/test-client    ./demo
+    - docker build -t abdotalaat/test-client    .
     - docker push abdotalaat/test-client
 
 
