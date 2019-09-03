@@ -38,7 +38,7 @@
     {
       "name":"customer",
       "image":"abdotalaat/test-client1",
-      "hostname":"client",
+      "hostname":"customer",
       "essential": false,
       "memory":128,
       "portMappings":[
