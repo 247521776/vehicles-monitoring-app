@@ -10,4 +10,4 @@ sudo: false # faster builds
 
 
 script:
-    mvn clean installgit
+    mvn clean install
