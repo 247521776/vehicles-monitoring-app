@@ -9,5 +9,12 @@ cache:
 sudo: false # faster builds
 
 
+addons:
+  sonarcloud:
+    organization: "abdotalaat"
+    token:
+      secure: $SONAR_TOKEN
+
+
 script:
-    mvn clean install
+    - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=abdotalaat_vehicles-monitoring-app
