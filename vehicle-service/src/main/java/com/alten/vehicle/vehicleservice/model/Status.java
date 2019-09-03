@@ -10,4 +10,12 @@ public enum Status {
         this.vehicleStatus = vehicleStatus;
     }
 
+
+    public int getVehicleStatus() {
+        return vehicleStatus;
+    }
+
+    public void setVehicleStatus(int vehicleStatus) {
+        this.vehicleStatus = vehicleStatus;
+    }
 }

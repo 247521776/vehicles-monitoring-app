@@ -5,4 +5,3 @@ spring:
     config:
       uri: http://config:8081
       fail-fast: true
-
