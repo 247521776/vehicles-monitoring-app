@@ -32,7 +32,11 @@
           "hostPort":8080,
           "containerPort":8080
         }
-      ]
+      ],
+      "mountPoints": [{
+        "sourceVolume": "app",
+        "containerPath": "/opt/app"
+      }]
     },
     {
       "name":"config",
