@@ -1,8 +1,28 @@
 {
   "AWSEBDockerrunVersion": 2,
+
+  "volumes": [{
+    "name": "ui",
+    "host": {
+      "sourcePath": "/var/app/current/vehicle-monitoring-ui"
+    }
+  },
+    {
+      "name": "proxy",
+      "host": {
+        "sourcePath": "/var/app/current/etc/nginx"
+      }
+    },
+    {
+      "name": "app",
+      "host": {
+        "sourcePath": "/opt/app"
+      }
+    }
+  ],
   "containerDefinitions": [
     {
-      "name":"client",
+      "name":"config",
       "image":"abdotalaat/config-service",
       "hostname":"config",
       "essential": true,
@@ -11,6 +31,22 @@
           "hostPort":8081,
           "containerPort":8081
         }
+      ],
+      "memory":128
+    },{
+      "name":"ngnix",
+      "image":"abdotalaat/multi-nginx",
+      "hostname":"nginx",
+      "essential": true,
+      "portMappings":[
+        {
+          "hostPort":80,
+          "containerPort":80
+        }
+      ],
+      "links":
+      [
+        "client","server"
       ],
       "memory":128
     }
