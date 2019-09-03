@@ -38,13 +38,25 @@
         "containerPath": "/opt/app"
       }]
     },
+
     {
-      "name":"config",
-      "image":"abdotalaat/config-service",
-      "hostname":"config",
-      "essential": true,
-      "memory":128
-    },{
+      "name":"discovery",
+      "image":"abdotalaat/discovery-service",
+      "hostname":"discovery",
+      "essential": false,
+      "memory":128,
+      "portMappings":[
+        {
+          "hostPort":8761,
+          "containerPort":8761
+        }
+      ],
+      "mountPoints": [{
+        "sourceVolume": "app",
+        "containerPath": "/opt/app"
+      }]
+    },
+    ,{
       "name":"ngnix",
       "image":"abdotalaat/multi-nginx",
       "hostname":"nginx",
