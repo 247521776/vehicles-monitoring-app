@@ -27,3 +27,19 @@ after_success:
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
     - docker build -t abdotalaat/config-service ./config-service
     - docker push abdotalaat/config-service
+
+
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  app: "vehicles-monitoring-app"
+  env: "VehiclesMonitoringApp-env"
+  bucket_name: "elasticbeanstalk-us-east-2-990019026330"
+  bucket_path: "vehicles-monitoring-app"
+  on:
+    branch: master
+  access_key_id:
+    secure: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure : "$AWS_SECRET_KEY"

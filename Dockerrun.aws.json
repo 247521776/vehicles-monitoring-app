@@ -1,0 +1,17 @@
+{
+  "AWSEBDockerrunVersion": 2,
+  "containerDefinitions": [
+    {
+      "name":"client",
+      "image":"abdotalaat/config-service",
+      "hostname":"config",
+      "essential": false,
+      "memory":128
+    }
+
+
+
+
+
+  ]
+}
