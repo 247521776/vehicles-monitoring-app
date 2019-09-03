@@ -6,6 +6,12 @@
       "image":"abdotalaat/config-service",
       "hostname":"config",
       "essential": true,
+      "portMappings":[
+        {
+          "hostPort":8081,
+          "containerPort":8081
+        }
+      ],
       "memory":128
     }
 
